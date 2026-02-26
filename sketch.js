@@ -243,20 +243,20 @@ function superHappyMeow() {
 function preload() {
   handPose = ml5.handPose();
 
-  cats[0] = loadImage("images/catstill_.GIF");
-  cats[1] = loadImage("images/catwalk_.GIF");
+  cats[0] = loadImage("images/catstill_.gif");
+  cats[1] = loadImage("images/catwalk_.gif");
 
-  mushroom = loadImage("images/mushroom.GIF");
-  mushroomcat = loadImage("images/catmushroom_.GIF");
+  mushroom = loadImage("images/mushroom.gif");
+  mushroomcat = loadImage("images/catmushroom_.gif");
 
-  sardines = loadImage("images/sardines.GIF");
-  catfish = loadImage("images/catfish_.GIF");
+  sardines = loadImage("images/sardines.gif");
+  catfish = loadImage("images/catfish_.gif");
 
-  bushes = loadImage("images/bushes.GIF");
-  flowers = loadImage("images/flowers.GIF");
+  bushes = loadImage("images/bushes.gif");
+  flowers = loadImage("images/flowers.gif");
 
-  yarnball = loadImage("images/yarnball.GIF");
-  catyarn = loadImage("images/catyarn.GIF");
+  yarnball = loadImage("images/yarnball.gif");
+  catyarn = loadImage("images/catyarn.gif");
 
   endingGif = loadImage("images/finalcatscene.gif");
 
