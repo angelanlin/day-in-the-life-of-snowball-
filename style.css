@@ -1,0 +1,150 @@
+.grandstander {
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.love-ya-like-a-sister-regular {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 40px;
+  line-height: 1em;
+  text-align: center;
+  padding-top: 30px;
+  align-items: center;
+  color: rgb(21, 68, 207);
+  height: 100vh;
+  margin: 0;
+  background-image: url("images/bg.png");
+  background-size: cover; /* scales to fill */
+  background-position: center; /* keeps it centered */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-color: rgb(235, 244, 233); /* controls lightness */
+  background-blend-mode: overlay; /* controls how the background image and color blend */
+}
+
+h3 {
+  font-size: 30px;
+  font-family: "Love Ya Like A Sister", cursive;
+  line-height: 0.1em;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "Grandstander", cursive;
+  line-height: 0.1em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 25px;
+  font-family: "Grandstander", cursive;
+  line-height: 0.1em;
+}
+#canvas-holder canvas {
+  border-radius: 20px;   /* adjust to taste */
+  overflow: hidden;      /* ensures the drawing doesn't spill outside the curve */
+  border-radius: 24px;  
+  box-shadow: 0 0 20px rgba(255, 180, 255, 0.4); 
+  overflow: hidden;
+}
+
+.items-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  margin-top: 16px;
+  gap: 5px; /* cute spacing between items */
+}
+/* 🌸 Pastel border + soft glow */
+
+.item {
+  text-align: center;
+  width: auto;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 18px;
+  border: 3px solid #f7c8f0; /* pastel pink */
+  background: rgb(255, 255, 255);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column; /* stack text above image */
+  align-items: center; /* center everything nicely */
+  text-align: center;
+}
+
+/* ✨ Sparkle hover effect */
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 182, 255, 0.6);
+}
+
+/* ✨ Sparkle particles on hover */
+.item:hover::after {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 22px;
+  animation: sparkleFloat 1.2s ease-in-out infinite;
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px) rotate(15deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* 💖 Pastel underline for h2 */
+.item h2 {
+  font-family: "Grandstander", cursive;
+  position: relative;
+  display: inline-block;
+  margin-top: 1px;
+  padding-bottom: 10px; /* more space above underline */
+  margin-bottom: 3px; /* pushes underline further down */
+  line-height: 1.1em; /* fixes the squished text */
+}
+
+.item h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #ffd6f6, #c9e8ff, #ffe8b3);
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+/* Underline animates in on hover */
+.item:hover h2::after {
+  transform: scaleX(1);
+}
